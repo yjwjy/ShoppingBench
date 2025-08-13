@@ -1,0 +1,14 @@
+{
+    "task": "product",
+    "system_prompt_file": "src/agent/prompt/rollout.md",
+    "synthesize_file": "data/synthesize_product.jsonl",
+    "rollout_file": "data/rollout_product_gemma-3-4b-it.jsonl",
+    "threads": 4,
+    "base_url": "http://127.0.0.1:30000/v1",
+    "api_key": "None",
+    "model_config": {
+        "model": "gemma-3-4b-it",
+        "temperature": 0,
+        "max_tokens": 8192
+    }
+}

@@ -1,10 +1,7 @@
 # ShoppingBench: A Real-World Intent-Grounded Shopping Benchmark for LLM-based Agents
 
-code and data will coming soon !
-
-[![Paper](https://img.shields.io/badge/Paper-arXiv:2412.12345-red)](https://arxiv.org/abs/your-paper-id)
-[![Dataset](https://img.shields.io/badge/Dataset-HuggingFace-yellow)](https://huggingface.co/datasets/your-dataset-link)
-[![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
+[![Paper](https://img.shields.io/badge/Paper-arXiv:2412.12345-red)](https://arxiv.org/abs/2508.04266)
+<!-- [![Dataset](https://img.shields.io/badge/Dataset-HuggingFace-yellow)](https://huggingface.co/datasets/your-dataset-link) -->
 
 ## Overview
 
@@ -19,8 +16,105 @@ ShoppingBench is a novel end-to-end shopping benchmark designed to encompass inc
 
 ## Dataset
 
-The ShoppingBench dataset includes:
+The ShoppingBench dataset will be released soon, it will include documents.jsonl and testset.zip
+
+## Environment Setup
+
+### prerequist
+
+1. install java (jdk21 recommended)
+
+2. install uv
+
+3. download documents.jsonl and place it in resources folder
+
+4. prepare related KEY
+```bash
+export OPENAI_API_KEY="your openai api key"
+export OPENAI_BASE_URL="your openai base url"
+export SERPER_KEY="your serper web search key"
+```
+
+### Python Environment Installation and Search Engine Preparation
+
+Run the initialization script to set up the Python environment and start the product search engine:
+
+```bash
+./init_env.sh
+```
+
+After running the environment setup script, the search engine will be automatically started in the background. 
+
+
+## Running Inference and Evaluation
+
+To run model inference on test data and evaluate the models for different intents:
+
+1. download testset.zip and 
+   ```bash
+   unzip testset.zip 
+   ```
+   
+2. Run the inference scripts (take gpt-4.1 as example):
+   
+   The script will automatically create necessary directories and validate the data folder structure before running model inference and evaluation.
+
+   ```bash
+   ./run.sh product rollout gpt-4.1
+   ./run.sh shop rollout gpt-4.1
+   ./run.sh voucher rollout gpt-4.1
+   ./run.sh web simpleqa_rollout gpt-4.1
+   ```
+
+   the inference process will be running in background, you can check the log in logs folder. you can uncomment the specific line to evaluate the inference result or kill the inference process.
+
+
+## Training SFT and RL Models
+
+### SFT Environment Installation
+
+Install SFT environment and its dependencies (llama factory):
+
+```bash
+cd src/sft/LLaMA-Factory
+uv pip install -e ".[torch,metrics,deepspeed]" --no-build-isolation
+```
+
+### RL Environment Installation
+
+Install RL environment and its dependencies:
+
+```bash
+cd src/rl
+USE_MEGATRON=0 bash install_vllm_sglang_mcore.sh
+# verl
+uv pip install -e .
+```
+
+### Usage
+To train the SFT and RL models:
+
+For SFT training:  
+1. prepare sft data
+   ```bash
+   cd src/sft
+   mkdir data
+   ```
+   place dataset_info.json and training data in the data directory
+
+2.  run sft scripts
+```bash
+   ./submit.sh yaml_file
+   ```
+
+For RL training:  
+1. run rl scripts
+   ```bash
+   cd src/rl
+   ./run_grpo.sh
+   ```
+
 
 ## Paper
 
-For more details about ShoppingBench, please refer to our paper:
+For more details about ShoppingBench, please refer to our paper

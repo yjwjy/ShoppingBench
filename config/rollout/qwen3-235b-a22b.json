@@ -1,0 +1,16 @@
+{
+    "task": "product",
+    "system_prompt_file": "src/agent/prompt/rollout.md",
+    "synthesize_file": "data/synthesize_product.jsonl",
+    "rollout_file": "data/rollout_product_qwen3-235b-a22b.jsonl",
+    "threads": 4,
+    "model_config": {
+        "model": "qwen3-235b-a22b",
+        "temperature": 0,
+        "max_tokens": 8192,
+        "stream": true,
+        "extra_body": {
+            "enable_thinking": true
+        }
+    }
+}

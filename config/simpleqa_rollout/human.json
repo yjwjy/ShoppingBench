@@ -1,0 +1,9 @@
+{
+    "task": "web",
+    "system_prompt_file": "src/agent/prompt/rollout.web_search",
+    "synthesize_file": "data/synthesize_web_simpleqa_test.jsonl",
+    "rollout_file": "data/simpleqa/rollout_web_human.jsonl",
+    "model_config": {
+        "model": "human"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "task": "web",
+    "system_prompt_file": "src/agent/prompt/rollout.ablation_websearch",
+    "synthesize_file": "data/synthesize_web_simpleqa_test.jsonl",
+    "rollout_file": "data/simpleqa/rollout_web_o3-mini.jsonl",
+    "threads": 1,
+    "exclude_tools": [
+        "web_search"
+    ],
+    "model_config": {
+        "model": "o3-mini-2025-01-31",
+        "max_completion_tokens": 8192
+    }
+}

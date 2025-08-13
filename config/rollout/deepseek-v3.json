@@ -1,0 +1,12 @@
+{
+    "task": "product",
+    "system_prompt_file": "src/agent/prompt/rollout.md",
+    "synthesize_file": "data/synthesize_product.jsonl",
+    "rollout_file": "data/rollout_product_deepseek-v3.jsonl",
+    "threads": 4,
+    "model_config": {
+        "model": "deepseek-v3",
+        "temperature": 0,
+        "max_tokens": 8192
+    }
+}

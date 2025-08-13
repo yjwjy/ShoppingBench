@@ -1,0 +1,13 @@
+{
+    "task": "product",
+    "system_prompt_file": "src/agent/prompt/rollout.md",
+    "synthesize_file": "data/synthesize_product.jsonl",
+    "rollout_file": "data/rollout_product_qwen3-coder-plus.jsonl",
+    "threads": 4,
+    "model_config": {
+        "model": "qwen3-coder-plus",
+        "temperature": 0,
+        "max_tokens": 8192,
+        "stream": false
+    }
+}

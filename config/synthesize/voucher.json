@@ -1,0 +1,13 @@
+{
+    "task": "voucher",
+    "total": 1000,
+    "synthesize_prompt_file": "src/agent/prompt/synthesize.md",
+    "documents_file": "resources/documents.jsonl",
+    "synthesize_file": "data/synthesize_voucher.jsonl",
+    "model_config": {
+        "model": "gpt-4.1-2025-04-14-GlobalStandard",
+        "temperature": 0.2,
+        "top_p": 0.2,
+        "max_tokens": 8192
+    }
+}

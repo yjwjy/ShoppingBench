@@ -1,0 +1,31 @@
+{
+    "task": "voucher",
+    "synthesize_file": "data/synthesize_voucher_human.jsonl",
+    "rollout_files": [
+        "data/ablation_react_voucher_gpt-4.1.jsonl",
+        "data/ablation_react_voucher_gpt-4o.jsonl",
+        "data/ablation_react_voucher_sft_qwen3-4b.jsonl",
+        "data/rollout_voucher_claude-4-sonnet.jsonl",
+        "data/rollout_voucher_deepseek-r1.jsonl",
+        "data/rollout_voucher_deepseek-v3.jsonl",
+        "data/rollout_voucher_gemini-2.5-flash.jsonl",
+        "data/rollout_voucher_gemini-2.5-pro.jsonl",
+        "data/rollout_voucher_gemma-3-12b-it.jsonl",
+        "data/rollout_voucher_gemma-3-27b-it.jsonl",
+        "data/rollout_voucher_gemma-3-4b-it.jsonl",
+        "data/rollout_voucher_gpt-4.1.jsonl",
+        "data/rollout_voucher_gpt-4o-mini.jsonl",
+        "data/rollout_voucher_gpt-4o.jsonl",
+        "data/rollout_voucher_o3-mini.jsonl",
+        "data/rollout_voucher_qwen-max.jsonl",
+        "data/rollout_voucher_qwen3-14b.jsonl",
+        "data/rollout_voucher_qwen3-235b-a22b-instruct.jsonl",
+        "data/rollout_voucher_qwen3-235b-a22b.jsonl",
+        "data/rollout_voucher_qwen3-32b.jsonl",
+        "data/rollout_voucher_qwen3-4b.jsonl",
+        "data/rollout_voucher_qwen3-8b.jsonl",
+        "data/rollout_voucher_qwen3-coder-plus.jsonl",
+        "data/rollout_voucher_sft_qwen3-4b.jsonl"
+    ],
+    "multi_vote_file": "data/rollout_voucher_human.jsonl"
+}

@@ -1,0 +1,12 @@
+{
+    "task": "web",
+    "synthesize_file": "data/synthesize_web_simpleqa_train.jsonl",
+    "rollout_files": [
+        "data/simpleqa/train_data/train_simpleqa_rollout_web_gpt-4.1.jsonl",
+        "data/simpleqa/train_data/train_simpleqa_rollout_web_o3-mini.jsonl",
+        "data/simpleqa/train_data/train_simpleqa_rollout_web_claude-4-sonnet.jsonl",
+        "data/simpleqa/train_data/train_simpleqa_rollout_nothink_web_gpt-4.1.jsonl",
+        "data/simpleqa/train_data/train_simpleqa_rollout_nothink_web_o3-mini.jsonl"
+    ],
+    "rs_file": "data/rs_re_act_simpleqa_web.json"
+}

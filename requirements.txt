@@ -1,0 +1,10 @@
+pyserini==1.0.0
+Flask
+ujson
+waitress
+sentence-transformers
+portalocker
+duckduckgo_search
+colorama
+googlesearch-python
+mcp

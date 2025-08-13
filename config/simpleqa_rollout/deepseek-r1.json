@@ -1,0 +1,12 @@
+{
+    "task": "web",
+    "system_prompt_file": "src/agent/prompt/rollout.web_search",
+    "synthesize_file": "data/synthesize_web_simpleqa_test.jsonl",
+    "rollout_file": "data/simpleqa/rollout_web_deepseek-r1.jsonl",
+    "threads": 1,
+    "model_config": {
+        "model": "deepseek-r1-0528",
+        "temperature": 0,
+        "max_tokens": 8192
+    }
+}

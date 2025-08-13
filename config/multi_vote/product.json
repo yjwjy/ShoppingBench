@@ -1,0 +1,31 @@
+{
+    "task": "product",
+    "synthesize_file": "data/synthesize_product_human.jsonl",
+    "rollout_files": [
+        "data/ablation_react_product_gpt-4.1.jsonl",
+        "data/ablation_react_product_gpt-4o.jsonl",
+        "data/ablation_react_product_sft_qwen3-4b.jsonl",
+        "data/rollout_product_claude-4-sonnet.jsonl",
+        "data/rollout_product_deepseek-r1.jsonl",
+        "data/rollout_product_deepseek-v3.jsonl",
+        "data/rollout_product_gemini-2.5-flash.jsonl",
+        "data/rollout_product_gemini-2.5-pro.jsonl",
+        "data/rollout_product_gemma-3-12b-it.jsonl",
+        "data/rollout_product_gemma-3-27b-it.jsonl",
+        "data/rollout_product_gemma-3-4b-it.jsonl",
+        "data/rollout_product_gpt-4.1.jsonl",
+        "data/rollout_product_gpt-4o-mini.jsonl",
+        "data/rollout_product_gpt-4o.jsonl",
+        "data/rollout_product_o3-mini.jsonl",
+        "data/rollout_product_qwen-max.jsonl",
+        "data/rollout_product_qwen3-14b.jsonl",
+        "data/rollout_product_qwen3-235b-a22b-instruct.jsonl",
+        "data/rollout_product_qwen3-235b-a22b.jsonl",
+        "data/rollout_product_qwen3-32b.jsonl",
+        "data/rollout_product_qwen3-4b.jsonl",
+        "data/rollout_product_qwen3-8b.jsonl",
+        "data/rollout_product_qwen3-coder-plus.jsonl",
+        "data/rollout_product_sft_qwen3-4b.jsonl"
+    ],
+    "multi_vote_file": "data/rollout_product_human.jsonl"
+}

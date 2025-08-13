@@ -1,0 +1,40 @@
+task_submit_setting:
+  world_size: 8
+  entry: src/train_bash.py
+  project: '${project}'
+llm_running_param:
+  basic:
+    model_name_or_path: Qwen/Qwen3-4B
+    adapter_name_or_path: ''
+    lora_target: 'o_proj,q_proj,k_proj,v_proj'
+    template: 'qwen3'
+    prompt: instruction
+    query: input
+    response: output
+  extended:
+    do_train: true
+    overwrite_cache: true
+    plot_loss: true
+    overwrite_output_dir: true
+    per_device_train_batch_size: 1
+    gradient_accumulation_steps: 1
+    lr_scheduler_type: cosine
+    logging_steps: 0.01
+    save_strategy: steps
+    save_steps: 0.2
+    num_train_epochs: 5
+    learning_rate: 5e-05
+    cutoff_len: 20480
+    preprocessing_num_workers: 8
+    dataloader_num_workers: 8
+    do_eval: true
+    val_size: 0.1
+    eval_strategy: steps
+    eval_steps: 0.1
+    per_device_eval_batch_size: 1
+    packing: true
+    bf16: true
+    quantization_bit: ''
+  build-in:
+    stage: sft
+    finetuning_type: lora

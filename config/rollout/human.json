@@ -1,0 +1,9 @@
+{
+    "task": "product",
+    "system_prompt_file": "src/agent/prompt/rollout",
+    "synthesize_file": "data/synthesize_product_human.jsonl",
+    "rollout_file": "data/rollout_product_human.jsonl",
+    "model_config": {
+        "model": "human"
+    }
+}

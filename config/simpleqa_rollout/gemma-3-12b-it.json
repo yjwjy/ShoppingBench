@@ -1,0 +1,15 @@
+{
+    "task": "web",
+    "system_prompt_file": "src/agent/prompt/rollout.web_search",
+    "synthesize_file": "data/synthesize_web_simpleqa_test.jsonl",
+    "rollout_file": "data/simpleqa/rollout_web_gemma-3-12b-it.jsonl",
+    "threads": 1,
+    "base_url": "http://127.0.0.1:30000/v1",
+    "api_key": "None",
+    "model_config": {
+        "model": "gemma-3-12b-it",
+        "temperature": 0,
+        "max_tokens": 8192,
+        "stream": true
+    }
+}

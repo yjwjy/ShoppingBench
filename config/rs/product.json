@@ -1,0 +1,9 @@
+{
+    "task": "product",
+    "synthesize_file": "data/synthesize_product_train.jsonl",
+    "rollout_files": [
+        "data/rollout_product_gpt-4.1.jsonl",
+        "data/ablation_react_product_gpt-4.1.jsonl"
+    ],
+    "rs_file": "data/rs_product.json"
+}

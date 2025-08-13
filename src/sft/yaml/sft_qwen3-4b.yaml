@@ -1,0 +1,45 @@
+### model
+model_name_or_path: /home/wangjiangyuan.wjy/model/Qwen/Qwen3-4B
+template: qwen3
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: deepspeed/ds_z2_config.json  # choices: [ds_z0_config.json, ds_z2_config.json, ds_z3_config.json]
+
+### dataset
+dataset: rs2_merge_train_psvk
+cutoff_len: 20480
+overwrite_cache: true
+preprocessing_num_workers: 8
+dataloader_num_workers: 8
+packing: true
+
+### output
+output_dir: saves/qwen3-4b/full/sft
+logging_steps: 0.01
+save_steps: 0.2
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: false
+report_to: wandb  # choices: [none, wandb, tensorboard, swanlab, mlflow]
+
+### train
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 1
+learning_rate: 5.0e-5
+num_train_epochs: 5.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+
+## eval
+eval_dataset: rs2_merge_train_psvk
+# val_size: 0.1
+per_device_eval_batch_size: 1
+eval_strategy: steps
+eval_steps: 0.1

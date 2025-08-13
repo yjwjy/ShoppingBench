@@ -1,0 +1,11 @@
+{
+    "task": "product",
+    "system_prompt_file": "src/agent/prompt/rollout.md",
+    "synthesize_file": "data/synthesize_product.jsonl",
+    "rollout_file": "data/rollout_product_o3-mini.jsonl",
+    "threads": 4,
+    "model_config": {
+        "model": "o3-mini-2025-01-31",
+        "max_completion_tokens": 8192
+    }
+}

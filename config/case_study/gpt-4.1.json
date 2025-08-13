@@ -1,0 +1,6 @@
+{
+    "task": "product",
+    "synthesize_file": "data/synthesize_product_human.jsonl",
+    "rollout_file": "data/rollout_product_gpt-4.1.jsonl",
+    "case_study_file": "data/case_study_product_gpt-4.1.jsonl"
+}
