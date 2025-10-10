@@ -16,7 +16,17 @@ ShoppingBench is a novel end-to-end shopping benchmark designed to encompass inc
 
 ## Dataset
 
-The ShoppingBench dataset will be released soon, it will include documents.jsonl and testset.zip
+The ShoppingBench dataset includes:
+
+1. **documents.jsonl.gz**: A compressed file containing product documents (located in `resources/` directory)
+   - To decompress: `gunzip -c resources/documents.jsonl.gz > resources/documents.jsonl`
+   - Size: ~1.4GB compressed, ~4.8GB uncompressed
+
+2. **Test files**: Located in the `data/` directory
+   - `synthesize_product_test.jsonl`: Product Intent test cases
+   - `synthesize_shop_test.jsonl`: Shop Intent test cases  
+   - `synthesize_voucher_test.jsonl`: Voucher Intent test cases
+   - `synthesize_web_simpleqa_test.jsonl`: Web search Intent test cases
 
 ## Environment Setup
 
@@ -26,7 +36,10 @@ The ShoppingBench dataset will be released soon, it will include documents.jsonl
 
 2. install uv
 
-3. download documents.jsonl and place it in resources folder
+3. decompress documents.jsonl.gz to get documents.jsonl in resources folder:
+   ```bash
+   gunzip -c resources/documents.jsonl.gz > resources/documents.jsonl
+   ```
 
 4. prepare related KEY
 ```bash
