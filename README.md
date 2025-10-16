@@ -62,13 +62,8 @@ After running the environment setup script, the search engine will be automatica
 ## Running Inference and Evaluation
 
 To run model inference on test data and evaluate the models for different intents:
-
-1. download testset.zip and 
-   ```bash
-   unzip testset.zip 
-   ```
    
-2. Run the inference scripts (take gpt-4.1 as example):
+1. Run the inference scripts (take gpt-4.1 as example):
    
    The script will automatically create necessary directories and validate the data folder structure before running model inference and evaluation.
 
