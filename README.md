@@ -77,6 +77,7 @@ To run model inference on test data and evaluate the models for different intent
    the inference process will be running in background, you can check the log in logs folder. you can uncomment the specific line to evaluate the inference result or kill the inference process.
 
 2. Run the evaluation scripts (take gpt-4.1 as example):
+3. 
    Please update run.sh by uncommenting the line for run_evaluate.py and commenting out the line for run_rollout, then rerun the scripts.
    ```bash
    ./run.sh product rollout gpt-4.1
