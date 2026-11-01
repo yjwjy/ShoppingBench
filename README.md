@@ -1,3 +1,5 @@
+
+
 # ShoppingBench: A Real-World Intent-Grounded Shopping Benchmark for LLM-based Agents
 
 [![Paper](https://img.shields.io/badge/Paper-arXiv:2412.12345-red)](https://arxiv.org/abs/2508.04266)
@@ -30,7 +32,7 @@ The ShoppingBench dataset includes:
 
 ## Environment Setup
 
-### prerequist
+### Prerequisites
 
 1. install java (jdk21 recommended)
 
